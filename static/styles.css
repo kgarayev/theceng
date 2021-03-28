@@ -1,0 +1,305 @@
+/* main and body boiler-plate */
+html, body {
+    height: 100%;
+    background: white;  /* white background color */
+    font-family: "Bahnschrift", sans-serif;
+    color: #574a46; /* brown normal color of everything else */
+    text-align: justify;
+
+}
+
+h4 {
+    color: #d2700f; /* orange colour of links and headings*/
+    font-weight: 800;
+    padding: 15px;
+    padding-top: 50px;
+}
+
+h6 {
+    color: #574a46;
+    font-weight: 600;
+    padding: 15px;
+    font-size:18px;
+}
+
+p {
+  padding-left: 15px;
+  padding-right: 40px;
+  font-size: 18px;
+}
+
+
+label {
+  padding-left: 15px;
+  padding-right: 45px;
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+}
+
+form {
+  padding: 15px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.text-responsive {
+  font-size: calc(100% + 1vw + 1vh);
+}
+
+main {
+    text-align: justify;
+    position: absolute;
+}
+
+
+.checkout{
+  padding-top: 100px;
+}
+
+
+.container-fluid {
+    height: 100%;
+}
+
+.foo{
+  width:100%;
+  background-color:#057c92;
+  height:200px;
+}
+
+
+.nav-link {
+    color: #d2700f; /* orange colour of links and headings*/
+    font-weight: 600;
+}
+
+
+.topnav {
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+    width: 100%;
+    font-weight: 600;
+}
+
+
+.logo {
+    color: #057c92;
+    float: left;
+    text-decoration: none;
+    font-size: 20pt;
+    text-align: center;
+    font-weight: 800;
+    padding:5px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+
+.topnav a {
+    color: #d2700f; /* orange colour of links and headings*/
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.left {
+    text-decoration: none;
+    float: left;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    padding-top:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.right {
+    text-decoration: none;
+    float: right;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+.topnav a:hover {
+    color: #8B4513;
+}
+
+a {
+  color: #343a40;
+  font-weight: 600;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #8B4513;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+/* footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: grey;
+    text-align: center;
+    font-size: 12pt;
+    background-color:#057c92;
+}
+
+.attention {
+  color: red;
+  font-weight: bold;
+}
+
+/* index.html */
+
+.theceng {
+  padding:125px;
+}
+
+.front {
+    font-size: 4rem;
+    font-weight: 900;
+    width: 100%;
+    color:#057c92; /* ice colour */
+    padding-left:10px;
+}
+
+
+.typing {
+    font-size: x-large;
+    font-weight: 600;
+    color: #d2700f;
+
+}
+
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  padding: 10px;
+  width: 75%;
+}
+
+input[type=email], select, textarea{
+  padding: 10px;
+  width: 75%;
+}
+
+input[type=password], select, textarea{
+  padding: 10px;
+  width: 75%;
+}
+
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+.button {
+  background-color: white;
+  border: 2px solid #057c92;
+  color: #574a46;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 18px;
+  transition-duration: 0.4s;
+}
+
+
+.button:hover {
+  background-color: #057c92;
+  color: white;
+}
+
+
+
+/* Style the submit button */
+.button-special {
+  background-color: white;
+  border: 2px solid #574a46;
+  color: #574a46;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 18px;
+  transition-duration: 0.4s;
+    position: absolute;
+  left: 50%;
+  padding:10px;
+}
+
+
+.button-special:hover {
+  background-color: #574a46;
+  color: white;
+}
+
+
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding: 5px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding: 5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

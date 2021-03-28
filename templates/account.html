@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    account
+{% endblock %}
+
+{% block main %}
+
+<script>
+
+    function check() {
+       var password = document.getElementById('password');
+       var passwordRepeat = document.getElementById('rpassword');
+
+
+       if (password.value != passwordRepeat.value)
+       {
+           passwordRepeat.setCustomValidity('The two passwords must match.');
+       }
+       else
+       {
+           // input is valid -- reset the error message
+           emailRepeat.setCustomValidity('');
+           passwordRepeat.setCustomValidity('');
+       }
+    }
+
+
+</script>
+
+<h4>Account</h4>
+<h6>Email: {{ email }}</h6>
+
+<h6>Change Password:</h6>
+<p style="color:red;">{{ apology }}</p>
+
+    <form action="/password" method="post" onsubmit="check()">
+
+        <div class="row">
+            <div class="col-2">
+                <label for="old_password">Old Password:</label>
+            </div>
+            <div class="col-10">
+                <input type="password" id="old_password" name="old_password" placeholder="Old Password" required autocomplete="off" autofocus class="form-control" minlength="8" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <label for="password">New Password:</label>
+            </div>
+            <div class="col-10">
+                <input type="password" id="password" name="password" placeholder="New Password" required autocomplete="off" autofocus class="form-control" minlength="8" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <label for="rpassword">Old Password:</label>
+            </div>
+            <div class="col-10">
+                <input type="password" id="rpassword" name="rpassword" placeholder="Old Password" required autocomplete="off" autofocus class="form-control" minlength="8" required>
+            </div>
+        </div>
+
+
+        <button class="button-special" type="submit">Change Password</button>
+        <p></p>
+
+    </form>
+
+
+    <form action="/delete_account" method="post">
+        <p></p>
+        <p></p>
+        <button class="button-special" type="submit" onclick="return confirm('Are you sure you want to delete your account?');">Delete Account</button>
+    </form>
+
+
+
+
+
+{% endblock %}
+
+

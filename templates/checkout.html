@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    checkout
+{% endblock %}
+
+{% block main %}
+
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script type="text/javascript">
+
+        window.onload=function(){
+                     // Create an instance of the Stripe object with your publishable API key
+        var stripe = Stripe('pk_test_51IR14MKfR42dgLceZWKzhFd0YDj77lMd50Hzgmnzb1aJQW8ZJqgBkf5NF82awOUUqMLmiaZ5ZiQzMP9s1D8L73tT00s1Y0eFCp');
+        var checkoutButton = document.getElementById('checkout-button');
+
+        checkoutButton.addEventListener('click', function() {
+            // Create a new Checkout Session using the server-side endpoint you
+            // created in step 3.
+            fetch('/create-checkout-session', {
+            method: 'POST',
+            })
+            .then(function(response) {
+            return response.json();
+            })
+            .then(function(session) {
+            return stripe.redirectToCheckout({ sessionId: session.id });
+            })
+            .then(function(result) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, you should display the localized error message to your
+            // customer using `error.message`.
+            if (result.error) {
+                alert(result.error.message);
+              }
+            })
+            .catch(function(error) {
+              console.error('Error:', error);
+            });
+        });
+
+        }
+
+    </script>
+
+
+    <h4>Checkout</h4>
+
+    {% if not session.basket %}
+
+        <p>Nothing to buy.</p>
+
+    {% else %}
+
+
+    <ol>
+
+        {% for service in services %}
+            <li>
+                {{ service.product }} Price: £{{ service.price }}
+            </li>
+        {% endfor %}
+
+
+    </ol>
+
+    <h6>Total cost: £{{ total[0]['SUM(price)'] }}</h6>
+    <button id="checkout-button" class="button-special">Checkout</button>
+
+
+    {% endif %}
+
+
+
+{% endblock %}
+

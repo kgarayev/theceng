@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    log in
+{% endblock %}
+
+{% block main %}
+
+{% if session.user_id %}
+
+You are logged in.
+
+{% else %}
+
+                <h4>Log In</h4>
+                    <div>
+                        <form action="/login" method="post">
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="email">Email:</label>
+                                </div>
+                                <div class="col-10">
+                                    <input id="email" name="email" placeholder="Your email" required type="email" autocomplete="off" autofocus required class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="password">Password:</label>
+                                </div>
+                                <div class="col-10">
+                                    <input type="password" minlength="8" id="password" name="password" placeholder="Your password" required autocomplete="off" autofocus required class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input class="button-special" type="submit" value="Log In">
+                            </div>
+                            <p>Not Registered? Register here: <a href="/register">Register.</a></p>
+                            <p> {{ apology }} </p>
+                        </form>
+                    </div>
+
+{% endif %}
+
+
+{% endblock %}
+

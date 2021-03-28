@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    register
+{% endblock %}
+
+{% block main %}
+
+<script>
+
+    function check() {
+       var email = document.getElementById('email');
+       var emailRepeat = document.getElementById('remail');
+       var password = document.getElementById('password');
+       var passwordRepeat = document.getElementById('rpassword');
+
+
+       if (email.value != emailRepeat.value)
+       {
+           emailRepeat.setCustomValidity('The two email addresses must match.');
+       }
+       else if (password.value != passwordRepeat.value)
+       {
+           passwordRepeat.setCustomValidity('The two passwords must match.');
+       }
+       else
+       {
+           // input is valid -- reset the error message
+           emailRepeat.setCustomValidity('');
+           passwordRepeat.setCustomValidity('');
+       }
+  }
+
+
+</script>
+
+
+{% if session.user_id %}
+
+You are registered. Log out to register a new user.
+
+{% else %}
+
+                <h4>Register</h4>
+                    <div>
+                        <form action="/register" method="post" onsubmit="check()">
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="fname">First Name:</label>
+                                </div>
+                                <div class="col-10">
+                                    <input type="text" id="fname" name="firstname" placeholder="Your name" required autocomplete="off" autofocus class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="lname">Last Name</label>
+                                </div>
+                                <div class="col-10">
+                                    <input type="text" id="lname" name="lastname" placeholder="Your last name" required autocomplete="off" autofocus class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="email">Email</label>
+                                </div>
+                                <div class="col-10">
+                                    <input id="email" name="email" placeholder="Your email" required type="email" oninput="check()" autocomplete="off" autofocus class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="remaill">Repeat Email:</label>
+                                </div>
+                                <div class="col-10">
+                                    <input id="remail" name="remail" placeholder="Please repeat email" required type="email" oninput="check()" autocomplete="off" autofocus class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="password">Password:</label>
+                                </div>
+                                <div class="col-10">
+                                    <input type="password" minlength="8" id="password" name="password" placeholder="Your password" required oninput="check()" autocomplete="off" autofocus class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="rpassword">Repeat Password:</label>
+                                </div>
+                                <div class="col-10">
+                                    <input type="password" minlength="8" id="rpassword" name="rpassword" placeholder="Repeat password" required oninput="check()" autocomplete="off" autofocus class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <input class="button-special" type="submit" value="Register">
+                            </div>
+                            <p> {{ apology }} </p>
+                        </form>
+                    </div>
+
+{% endif %}
+
+
+{% endblock %}
+

@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    services
+{% endblock %}
+
+{% block main %}
+
+
+        <h4 class="services-text">Services Offered</h4>
+
+        <div>
+
+
+            {% for service in services %}
+
+            <div class="row">
+                <div class="col-6">
+
+                    <h6>{{ service.product }}</h6>
+                    <p>Price: £{{ service.price }}</p>
+
+                </div>
+
+                <div class="col-6">
+
+                    <h6></h6>
+
+                    <form action="/basket" method="post">
+
+                        <input name="id" type="hidden" value="{{ service.id }}">
+                        <input name="price" type="hidden" value="{{ service.price }}">
+                        <input class="button" type="submit" value="Add to Basket">
+
+                    </form>
+
+                </div>
+
+            </div>
+
+                    {% endfor %}
+
+            <div>
+                <p style="text-decoration: underline; color: #057c92;">Quantities could be adjusted at the checkout.</p>
+            </div>
+
+        </div>
+
+{% endblock %}
+
