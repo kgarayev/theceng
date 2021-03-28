@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    main
+{% endblock %}
+
+{% block main %}
+
+<script>
+
+    var i = 0;
+    var text1 = "Here you learn how to become a Chartered Member of the Institution of Civil Engineers. Simple."
+    var speed = 60;
+
+    window.onload = function TypeWriter1()
+        {
+            if(i < text1.length)
+                {
+                    document.getElementById("typing").innerHTML += text1.charAt(i);
+                    i++;
+                    setTimeout(TypeWriter1, speed);
+                }
+        }
+
+</script>
+
+<div class="theceng">
+
+    <h3 class="front" id="front" style=":#057c92;">The CEng</h3>
+    <p class="typing" id="typing"></p>
+
+</div>
+
+{% endblock %}
+

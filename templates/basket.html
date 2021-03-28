@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    basket
+{% endblock %}
+
+{% block main %}
+
+    <h4>Basket</h4>
+
+    {% if not session.basket %}
+
+        <p>Your basket is empty.</p>
+
+    {% else %}
+
+        {% for service in services %}
+            <div class="row">
+                <div class="col-6">
+                    <h6>{{ service.product }}</h6>
+                    <p>Price: £{{ service.price }}</p>
+                </div>
+
+                <div class="col-6">
+                    <h6></h6>
+                    <form action="/delete" method="post">
+                        <input name="id" type="hidden" value="{{ service.id }}">
+                        <button class="button" type="submit" value="Remove">Remove</button>
+                    </form>
+                </div>
+            </div>
+
+        {% endfor %}
+
+            <div>
+                <p style="text-decoration: underline; color: #057c92;">Quantities could be adjusted at the checkout.</p>
+            </div>
+
+            <div class="checkout">
+
+                <div class="row" style="height: 500px; position: relative;">
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <form action="/clear" method="post">
+                            <button class="button-special" type="submit">Clear all basket</button>
+                        </form>
+                    </div>
+
+                    <div class="col-2">
+                        <form action="/checkout" method="get">
+                            <button class="button-special" type="submit">Go to Checkout</button>
+                        </form>
+                    </div>
+
+                    <div class="col-5"></div>
+                </div>
+            </div>
+
+    {% endif %}
+
+
+{% endblock %}
+

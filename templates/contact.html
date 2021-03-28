@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    contact
+{% endblock %}
+
+{% block main %}
+
+<script>
+
+    function check() {
+       var email = document.getElementById('email');
+       var emailRepeat = document.getElementById('remail');
+
+       if (email.value != emailRepeat.value) {
+           emailRepeat.setCustomValidity('The two email addresses must match.');
+       } else {
+           // input is valid -- reset the error message
+           emailRepeat.setCustomValidity('');
+       }
+
+    }
+
+
+</script>
+
+<h4>Contact Us</h4>
+    <div>
+        <form action="/contact" method="post">
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="fname">First Name:</label>
+                </div>
+                <div class="col-10">
+                    <input type="text" id="fname" name="firstname" placeholder="Your first name" autocomplete="off" autofocus  required class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="lname">Last Name:</label>
+                </div>
+                <div class="col-10">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name" autocomplete="off"  autofocus required class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="col-10">
+                    <input id="email" name="email" placeholder="Your email" required type="email" autocomplete="off"  autofocus oninput="check()" class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="remaill">Repeat Email:</label>
+                </div>
+                <div class="col-10">
+                    <input id="remail" name="remail" placeholder="Please repeat email" autocomplete="off" required type="email"  autofocus oninput="check()" class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="subject">Message Subject:</label>
+                </div>
+                <div class="col-10">
+                    <input type="text" id="subject" name="subject" placeholder="Your message subject" autocomplete="off"  autofocus required class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="message">Message:</label>
+                </div>
+                <div class="col-10">
+                    <input type="text" id="message" name="message" placeholder="Write your message" style="height:300px" autocomplete="off" autofocus required class="form-control">
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="row">
+                <input class="button-special" type="submit" value="Send">
+            </div>
+
+            <p></p>
+            <p></p>
+
+        </form>
+    </div>
+
+{% endblock %}
+
