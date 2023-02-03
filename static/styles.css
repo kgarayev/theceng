@@ -1,25 +1,25 @@
 /* main and body boiler-plate */
-html, body {
-    height: 100%;
-    background: white;  /* white background color */
-    font-family: "Bahnschrift", sans-serif;
-    color: #574a46; /* brown normal color of everything else */
-    text-align: justify;
-
+html,
+body {
+  height: 100%;
+  background: white; /* white background color */
+  font-family: "Bahnschrift", sans-serif;
+  color: #574a46; /* brown normal color of everything else */
+  text-align: justify;
 }
 
 h4 {
-    color: #d2700f; /* orange colour of links and headings*/
-    font-weight: 800;
-    padding: 15px;
-    padding-top: 50px;
+  color: #d2700f; /* orange colour of links and headings*/
+  font-weight: 800;
+  padding: 15px;
+  padding-top: 50px;
 }
 
 h6 {
-    color: #574a46;
-    font-weight: 600;
-    padding: 15px;
-    font-size:18px;
+  color: #574a46;
+  font-weight: 600;
+  padding: 15px;
+  font-size: 18px;
 }
 
 p {
@@ -27,7 +27,6 @@ p {
   padding-right: 40px;
   font-size: 18px;
 }
-
 
 label {
   padding-left: 15px;
@@ -52,92 +51,82 @@ ul {
 }
 
 main {
-    text-align: justify;
-    position: absolute;
+  text-align: justify;
+  position: absolute;
 }
 
-
-.checkout{
+.checkout {
   padding-top: 100px;
 }
 
-
 .container-fluid {
-    height: 100%;
+  height: 100%;
 }
 
-.foo{
-  width:100%;
-  background-color:#057c92;
-  height:200px;
+.foo {
+  width: 100%;
+  background-color: #057c92;
+  height: 200px;
 }
-
 
 .nav-link {
-    color: #d2700f; /* orange colour of links and headings*/
-    font-weight: 600;
+  color: #d2700f; /* orange colour of links and headings*/
+  font-weight: 600;
 }
-
 
 .topnav {
-    text-align: center;
-    overflow: hidden;
-    padding: 10px;
-    width: 100%;
-    font-weight: 600;
+  text-align: center;
+  overflow: hidden;
+  padding: 10px;
+  width: 100%;
+  font-weight: 600;
 }
-
 
 .logo {
-    color: #057c92;
-    float: left;
-    text-decoration: none;
-    font-size: 20pt;
-    text-align: center;
-    font-weight: 800;
-    padding:5px;
-    padding-left:20px;
-    padding-right:20px;
+  color: #057c92;
+  float: left;
+  text-decoration: none;
+  font-size: 20pt;
+  text-align: center;
+  font-weight: 800;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
 
 .topnav a {
-    color: #d2700f; /* orange colour of links and headings*/
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 600;
+  color: #d2700f; /* orange colour of links and headings*/
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
 }
-
 
 .left {
-    text-decoration: none;
-    float: left;
-    display: block;
-    text-align: center;
-    font-weight: 500;
-    padding-top:10px;
-    padding-left: 20px;
-    padding-right: 20px;
+  text-decoration: none;
+  float: left;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
 
 .right {
-    text-decoration: none;
-    float: right;
-    display: block;
-    text-align: center;
-    font-weight: 500;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+  text-decoration: none;
+  float: right;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-
-
 .topnav a:hover {
-    color: #8B4513;
+  color: #8b4513;
 }
 
 a {
@@ -155,7 +144,7 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: #8B4513;
+  color: #8b4513;
 }
 
 a:active {
@@ -168,13 +157,13 @@ a:focus {
 
 /* footer */
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    color: grey;
-    text-align: center;
-    font-size: 12pt;
-    background-color:#057c92;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: grey;
+  text-align: center;
+  font-size: 12pt;
+  background-color: #057c92;
 }
 
 .attention {
@@ -185,42 +174,44 @@ a:focus {
 /* index.html */
 
 .theceng {
-  padding:125px;
+  padding: 125px;
 }
 
 .front {
-    font-size: 4rem;
-    font-weight: 900;
-    width: 100%;
-    color:#057c92; /* ice colour */
-    padding-left:10px;
+  font-size: 4rem;
+  font-weight: 900;
+  width: 100%;
+  color: #057c92; /* ice colour */
+  padding-left: 10px;
 }
-
 
 .typing {
-    font-size: x-large;
-    font-weight: 600;
-    color: #d2700f;
-
+  font-size: x-large;
+  font-weight: 600;
+  color: #d2700f;
 }
-
 
 /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
+input[type="text"],
+select,
+textarea {
   padding: 10px;
   width: 75%;
 }
 
-input[type=email], select, textarea{
+input[type="email"],
+select,
+textarea {
   padding: 10px;
   width: 75%;
 }
 
-input[type=password], select, textarea{
+input[type="password"],
+select,
+textarea {
   padding: 10px;
   width: 75%;
 }
-
 
 /* Style the label to display next to the inputs */
 label {
@@ -240,13 +231,10 @@ label {
   transition-duration: 0.4s;
 }
 
-
 .button:hover {
   background-color: #057c92;
   color: white;
 }
-
-
 
 /* Style the submit button */
 .button-special {
@@ -258,18 +246,15 @@ label {
   font-size: 16px;
   border-radius: 18px;
   transition-duration: 0.4s;
-    position: absolute;
+  position: absolute;
   left: 50%;
-  padding:10px;
+  padding: 10px;
 }
-
 
 .button-special:hover {
   background-color: #574a46;
   color: white;
 }
-
-
 
 /* Floating column for labels: 25% width */
 .col-25 {
@@ -298,7 +283,9 @@ label {
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
     width: 100%;
     margin-top: 0;
   }
