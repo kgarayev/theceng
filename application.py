@@ -67,7 +67,7 @@ Session(app)
 
 # index route
 @app.route("/")
-def index()
+def index():
 
     return render_template("index.html")
 
@@ -113,7 +113,6 @@ def about():
 
 
 # clear all basket in one go
-@
 
 
 # contact page functionality
