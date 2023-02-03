@@ -1,14 +1,14 @@
 import os
 import json
-import stripe
+#import stripe
 from datetime import datetime
 import requests
-import sqlite3
+#import sqlite3
 import psycopg2
 import urlparse
-import sqlalchemy
+#import sqlalchemy
 
-from cs50 import SQL
+#from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session, url_for, jsonify
 from flask_session import Session
 from flask_mail import Mail, Message
@@ -264,8 +264,8 @@ def cancel():
 
 
 # stripe checkout page
-@app.route('/create-checkout-session', methods=['POST'])
-def create_checkout_session():
+#@app.route('/create-checkout-session', methods=['POST'])
+#def create_checkout_session():
 
     # assigning the price ids
     price_1 = all_prices["data"][0]["id"]
