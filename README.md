@@ -2,6 +2,14 @@
 #### Video Demo:  https://youtu.be/snF_QyvRu6Y
 #### Description: A website which offers help to civil engineers who want to become professionally qualified.
 
+## :computer: Tech Used
+
+- Programming Languages: Python
+- Frameworks: Flask
+- Web Development: HTML, CSS, Jinja
+- Version Control: Git
+- API: Stripe
+
 ## Structure
 
 #### Home Page / index.html
