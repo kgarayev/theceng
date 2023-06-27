@@ -4,8 +4,9 @@
 
 ## :computer: Tech Used
 
-- Programming Languages: Python
-- Frameworks: Flask
+- Programming Languages: Python, Javascript
+- Frameworks: Flask, jQuery
+- Database: SQLite
 - Web Development: HTML, CSS, Jinja
 - Version Control: Git
 - API: Stripe
